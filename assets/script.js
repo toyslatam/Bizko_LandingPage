@@ -104,6 +104,55 @@
     reveals.forEach(function (r) { r.classList.add("in"); });
   }
 
+  /* ---- Product gallery lightbox ---- */
+  (function () {
+    var lb = document.getElementById("lightbox");
+    if (!lb) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll(".gal-item"));
+    var stage = document.getElementById("lbStage");
+    var lbNum = document.getElementById("lbNum");
+    var lbTitle = document.getElementById("lbTitle");
+    var lbTag = document.getElementById("lbTag");
+    var current = 0;
+
+    function render(i) {
+      current = (i + items.length) % items.length;
+      var item = items[current];
+      var frame = item.querySelector(".frame");
+      stage.innerHTML = "";
+      if (frame) stage.appendChild(frame.cloneNode(true));
+      lbNum.textContent = item.getAttribute("data-n") || "";
+      lbTitle.textContent = item.getAttribute("data-title") || "";
+      var demo = item.querySelector(".gal-badge.is-demo");
+      lbTag.style.display = demo ? "" : "none";
+      stage.scrollTop = 0;
+    }
+    function open(i) {
+      render(i);
+      lb.classList.add("open");
+      document.body.classList.add("lb-open");
+    }
+    function close() {
+      lb.classList.remove("open");
+      document.body.classList.remove("lb-open");
+      stage.innerHTML = "";
+    }
+
+    items.forEach(function (item, i) {
+      item.addEventListener("click", function () { open(i); });
+    });
+    document.getElementById("lbClose").addEventListener("click", close);
+    document.getElementById("lbNext").addEventListener("click", function () { render(current + 1); });
+    document.getElementById("lbPrev").addEventListener("click", function () { render(current - 1); });
+    lb.addEventListener("click", function (e) { if (e.target === lb) close(); });
+    document.addEventListener("keydown", function (e) {
+      if (!lb.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowRight") render(current + 1);
+      else if (e.key === "ArrowLeft") render(current - 1);
+    });
+  })();
+
   /* ---- Smooth-scroll offset for sticky header on anchor clicks ---- */
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (e) {
