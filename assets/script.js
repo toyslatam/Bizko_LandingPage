@@ -155,8 +155,8 @@
 
   /* ---- Contact: WhatsApp + email + form ----
      Edit these two values with the real business contact.        */
-  var BIZKO_WA = "573000000000";          // WhatsApp (solo dígitos, con código de país, sin +)
-  var BIZKO_EMAIL = "hola@bizko.app";     // Correo de contacto
+  var BIZKO_WA = "573116521878";          // WhatsApp (solo dígitos, con código de país, sin +)
+  var BIZKO_EMAIL = "holabizkoapp@outlook.com";     // Correo de contacto
 
   (function () {
     function waLink(text) {
