@@ -153,6 +153,79 @@
     });
   })();
 
+  /* ---- Contact: WhatsApp + email + form ----
+     Edit these two values with the real business contact.        */
+  var BIZKO_WA = "573000000000";          // WhatsApp (solo dígitos, con código de país, sin +)
+  var BIZKO_EMAIL = "hola@bizko.app";     // Correo de contacto
+
+  (function () {
+    function waLink(text) {
+      return "https://wa.me/" + BIZKO_WA + "?text=" + encodeURIComponent(text || "Hola bizko 👋 Quiero empezar con mi negocio.");
+    }
+    function mailLink(subject, body) {
+      return "mailto:" + BIZKO_EMAIL +
+        "?subject=" + encodeURIComponent(subject || "Quiero conocer bizko") +
+        "&body=" + encodeURIComponent(body || "Hola, me interesa bizko para mi negocio.");
+    }
+    // Wire direct-contact links
+    document.querySelectorAll(".js-wa").forEach(function (a) { a.setAttribute("href", waLink()); a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); });
+    document.querySelectorAll(".js-mail, .js-mail-text").forEach(function (a) { a.setAttribute("href", mailLink()); });
+
+    var form = document.getElementById("contactForm");
+    if (!form) return;
+    var okBox = document.getElementById("formOk");
+
+    function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; }
+    function markInvalid(id, bad) {
+      var el = document.getElementById(id);
+      if (el) el.classList.toggle("invalid", !!bad);
+      return el;
+    }
+    function compose() {
+      var name = val("cf-name"), biz = val("cf-biz"), type = val("cf-type"),
+          wa = val("cf-wa"), email = val("cf-mail"), msg = val("cf-msg");
+      var lines = ["Hola bizko 👋 Quiero empezar con mi negocio.", ""];
+      lines.push("Nombre: " + name);
+      if (biz) lines.push("Negocio: " + biz);
+      if (type) lines.push("Tipo: " + type);
+      if (wa) lines.push("WhatsApp: " + wa);
+      if (email) lines.push("Correo: " + email);
+      if (msg) lines.push("Mensaje: " + msg);
+      return lines.join("\n");
+    }
+    function openUrl(url) {
+      var w = window.open(url, "_blank");
+      if (!w) window.location.href = url;
+    }
+    function showOk() {
+      if (okBox) { form.style.display = "none"; okBox.classList.add("show"); }
+    }
+    function send(via) {
+      var name = val("cf-name"), wa = val("cf-wa"), email = val("cf-mail");
+      var ok = true;
+      if (!name) { markInvalid("cf-name", true); ok = false; } else markInvalid("cf-name", false);
+      if (via === "whatsapp") {
+        if (!wa) { markInvalid("cf-wa", true); ok = false; } else markInvalid("cf-wa", false);
+      } else {
+        // email path: need an email, else fall back to whatsapp number requirement
+        if (!email) { markInvalid("cf-mail", true); ok = false; } else markInvalid("cf-mail", false);
+      }
+      if (!ok) { var bad = form.querySelector(".invalid"); if (bad) bad.focus(); return; }
+
+      var body = compose();
+      if (via === "whatsapp") openUrl(waLink(body));
+      else openUrl(mailLink("Quiero empezar con bizko — " + name, body));
+      showOk();
+    }
+
+    form.addEventListener("submit", function (e) { e.preventDefault(); send("whatsapp"); });
+    var emailBtn = form.querySelector('[data-send="email"]');
+    if (emailBtn) emailBtn.addEventListener("click", function () { send("email"); });
+    form.querySelectorAll(".field").forEach(function (f) {
+      f.addEventListener("input", function () { f.classList.remove("invalid"); });
+    });
+  })();
+
   /* ---- Smooth-scroll offset for sticky header on anchor clicks ---- */
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (e) {

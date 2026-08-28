@@ -90,6 +90,7 @@
     <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zm7.5 0h4.78v2.2h.07c.67-1.26 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.66V24h-5v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V24h-5z"/></symbol>
     <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
     <symbol id="i-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.21-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.44-1.71-1.6-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.43-.5.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38 0 1.4 1.03 2.76 1.17 2.95.14.19 2.03 3.1 4.92 4.35.69.3 1.22.47 1.64.6.69.22 1.32.19 1.81.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1-1.44-5.01c0-5.19 4.22-9.41 9.42-9.41 2.51 0 4.88.98 6.66 2.76a9.36 9.36 0 0 1 2.76 6.66c-.01 5.19-4.23 9.42-9.42 9.42zm8.02-17.44A11.32 11.32 0 0 0 12.04.72C5.8.72.72 5.8.72 12.04c0 1.99.52 3.94 1.51 5.66L.63 23.28l5.71-1.5a11.3 11.3 0 0 0 5.4 1.38h.01c6.24 0 11.32-5.08 11.32-11.32 0-3.02-1.18-5.87-3.32-8.01z"/></symbol>
   </defs>
 </svg>
 
@@ -113,8 +114,8 @@
         <li><a href="#faq">Preguntas</a></li>
       </ul>
       <div class="nav__actions">
-        <a href="#" class="nav__login">Iniciar sesión</a>
-        <a href="#precios" class="btn btn-primary">Comenzar gratis</a>
+        <a href="#" class="nav__wa js-wa"><svg><use href="#i-whatsapp"/></svg> WhatsApp</a>
+        <a href="#contacto" class="btn btn-primary">Comenzar gratis</a>
       </div>
       <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -139,7 +140,7 @@
       <p class="hero__sub">Administra, vende, controla y haz crecer tu negocio con Bizko.</p>
       <p class="hero__desc">Bizko reúne ventas, productos, inventario, clientes, pedidos, facturación, IA, CRM y automatizaciones en una sola plataforma.</p>
       <div class="hero__cta">
-        <a href="#precios" class="btn btn-primary btn-lg">Comenzar gratis</a>
+        <a href="#contacto" class="btn btn-primary btn-lg">Comenzar gratis</a>
         <a href="#demo" class="btn btn-ghost btn-lg"><svg width="18" height="18"><use href="#i-play"/></svg> Ver cómo funciona</a>
       </div>
       <div class="hero__trust">
@@ -324,7 +325,7 @@
           <li><svg><use href="#i-check"/></svg> Historial de ventas y clientes conectados</li>
           <li><svg><use href="#i-check"/></svg> Ventas físicas y digitales en un solo lugar</li>
         </ul>
-        <div class="feature__cta"><a href="#precios" class="btn btn-primary">Comenzar gratis</a></div>
+        <div class="feature__cta"><a href="#contacto" class="btn btn-primary">Comenzar gratis</a></div>
       </div>
       <div class="feature__media reveal">
         <div class="mediacard">
@@ -365,7 +366,7 @@
           <li><svg><use href="#i-check"/></svg> Opciones y adicionales para restaurantes</li>
           <li><svg><use href="#i-check"/></svg> Precios, disponibilidad y enlace para compartir</li>
         </ul>
-        <div class="feature__cta"><a href="#precios" class="btn btn-primary">Crear mi catálogo</a></div>
+        <div class="feature__cta"><a href="#contacto" class="btn btn-primary">Crear mi catálogo</a></div>
       </div>
       <div class="feature__media reveal">
         <div class="mediacard">
@@ -439,7 +440,7 @@
           <li><svg><use href="#i-check"/></svg> Estados de pedido, delivery y mesas cuando aplica</li>
           <li><svg><use href="#i-check"/></svg> Punto de venta, clientes y reportes</li>
         </ul>
-        <div class="feature__cta"><a href="#precios" class="btn btn-primary">Quiero Bizko para mi restaurante</a></div>
+        <div class="feature__cta"><a href="#contacto" class="btn btn-primary">Quiero Bizko para mi restaurante</a></div>
       </div>
     </div>
   </div>
@@ -1028,7 +1029,7 @@
         <div class="plan__price"><span class="cur">US$</span><span class="amt" data-m="5" data-y="4">5</span><span class="per">/mes</span></div>
         <p class="plan__note" data-note-year style="display:none">Facturado anualmente</p>
         <p class="plan__note" data-note-month>Facturación mensual</p>
-        <a href="#" class="btn btn-ghost btn-block">Comenzar gratis</a>
+        <a href="#contacto" class="btn btn-ghost btn-block">Comenzar gratis</a>
         <ul class="plan__feats">
           <li><svg><use href="#i-check"/></svg> <b>1</b> punto de venta</li>
           <li><svg><use href="#i-check"/></svg> Productos y servicios <b>ilimitados</b></li>
@@ -1044,7 +1045,7 @@
         <div class="plan__price"><span class="cur">US$</span><span class="amt" data-m="9" data-y="7">9</span><span class="per">/mes</span></div>
         <p class="plan__note" data-note-year style="display:none">Facturado anualmente</p>
         <p class="plan__note" data-note-month>Facturación mensual</p>
-        <a href="#" class="btn btn-primary btn-block">Comenzar gratis</a>
+        <a href="#contacto" class="btn btn-primary btn-block">Comenzar gratis</a>
         <ul class="plan__feats">
           <li><svg><use href="#i-check"/></svg> Todo lo del <b>Básico</b></li>
           <li><svg><use href="#i-check"/></svg> <b>Catálogo online</b> y pedidos</li>
@@ -1060,7 +1061,7 @@
         <div class="plan__price"><span class="cur">US$</span><span class="amt" data-m="20" data-y="16">20</span><span class="per">/mes</span></div>
         <p class="plan__note" data-note-year style="display:none">Facturado anualmente</p>
         <p class="plan__note" data-note-month>Facturación mensual</p>
-        <a href="#" class="btn btn-ghost btn-block">Comenzar gratis</a>
+        <a href="#contacto" class="btn btn-ghost btn-block">Comenzar gratis</a>
         <ul class="plan__feats">
           <li><svg><use href="#i-check"/></svg> Todo lo del <b>Negocio</b></li>
           <li><svg><use href="#i-check"/></svg> <b>IA</b> · 100 consultas/mes</li>
@@ -1076,7 +1077,7 @@
         <p class="plan__desc" style="color:#b9b6d8">Complemento para los planes compatibles.</p>
         <div class="plan__price"><span class="cur" style="color:#b9b6d8">Desde US$</span><span class="amt" style="color:#fff">10</span><span class="per" style="color:#b9b6d8">/mes</span></div>
         <p class="plan__note" style="color:#8f8cb3">Marketing + IA por créditos</p>
-        <a href="#marketing" class="btn btn-accent btn-block">Potenciar mi negocio</a>
+        <a href="#contacto" class="btn btn-accent btn-block">Potenciar mi negocio</a>
         <ul class="plan__feats">
           <li style="color:#d6d3f0"><svg style="color:#34e0b3"><use href="#i-check"/></svg> Créditos de marketing incluidos</li>
           <li style="color:#d6d3f0"><svg style="color:#34e0b3"><use href="#i-check"/></svg> Campañas y calendario</li>
@@ -1093,7 +1094,7 @@
         <h3>Potencia tu negocio con Marketing + IA</h3>
         <p>Suma capacidad de adquisición y contenido a tu plan. Un sistema de créditos que puedes controlar y ampliar cuando lo necesites.</p>
         <div class="addon__price"><span style="color:#b9b6d8">Desde</span><span class="amt">US$10</span><small>/mes</small></div>
-        <a href="#" class="btn btn-accent btn-lg">Agregar Marketing</a>
+        <a href="#contacto" class="btn btn-accent btn-lg">Agregar Marketing</a>
       </div>
       <div>
         <ul class="addon__feats">
@@ -1182,6 +1183,83 @@
   </div>
 </section>
 
+<!-- ===== CONTACTO / FORMULARIO ===== -->
+<section class="section section--soft" id="contacto">
+  <div class="container">
+    <div class="contact__grid">
+      <div class="contact__aside reveal">
+        <span class="eyebrow"><svg width="15" height="15"><use href="#i-whatsapp"/></svg> Empieza con bizko</span>
+        <h2>Cuéntanos de tu negocio y <span class="gradient-text">te ayudamos a arrancar.</span></h2>
+        <p class="lead">Déjanos tus datos y te escribimos para activar tu cuenta y resolver todas tus dudas. Sin compromiso.</p>
+        <ul class="contact__points">
+          <li><svg><use href="#i-check"/></svg> Respuesta rápida por WhatsApp o correo</li>
+          <li><svg><use href="#i-check"/></svg> Te ayudamos a configurar tu negocio</li>
+          <li><svg><use href="#i-check"/></svg> Sin tarjeta de crédito · Sin compromiso</li>
+        </ul>
+        <div class="contact__direct">
+          <a href="#" class="btn btn-wa js-wa"><svg><use href="#i-whatsapp"/></svg> Escríbenos por WhatsApp</a>
+          <a href="#" class="btn btn-ghost js-mail"><svg width="19" height="19"><use href="#i-mail"/></svg> Enviar un correo</a>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <form id="contactForm" novalidate>
+          <h3>Solicita tu acceso</h3>
+          <p>Completa el formulario y te contactamos.</p>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="cf-name">Nombre <span class="req">*</span></label>
+              <input class="field" type="text" id="cf-name" name="name" placeholder="Tu nombre" autocomplete="name" required />
+            </div>
+            <div class="form-row">
+              <label for="cf-biz">Nombre del negocio</label>
+              <input class="field" type="text" id="cf-biz" name="biz" placeholder="Ej. Boutique Sol" autocomplete="organization" />
+            </div>
+            <div class="form-row">
+              <label for="cf-type">Tipo de negocio</label>
+              <select class="field" id="cf-type" name="type">
+                <option value="" selected>Selecciona una opción</option>
+                <option>Tienda de ropa</option>
+                <option>Restaurante / comida rápida</option>
+                <option>Panadería</option>
+                <option>Tienda de mascotas</option>
+                <option>Barbería / peluquería</option>
+                <option>Lavandería</option>
+                <option>Taller</option>
+                <option>Frutas y verduras</option>
+                <option>Tienda / comercio</option>
+                <option>Otro servicio</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="cf-wa">WhatsApp <span class="req">*</span></label>
+              <input class="field" type="tel" id="cf-wa" name="whatsapp" placeholder="Ej. +57 300 123 4567" autocomplete="tel" required />
+            </div>
+            <div class="form-row form-row--full">
+              <label for="cf-mail">Correo electrónico</label>
+              <input class="field" type="email" id="cf-mail" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" />
+            </div>
+            <div class="form-row form-row--full">
+              <label for="cf-msg">¿En qué te ayudamos?</label>
+              <textarea class="field" id="cf-msg" name="message" placeholder="Cuéntanos qué necesitas para tu negocio…"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" data-send="whatsapp"><svg width="19" height="19"><use href="#i-whatsapp"/></svg> Enviar por WhatsApp</button>
+            <button type="button" class="btn btn-ghost" data-send="email"><svg width="18" height="18"><use href="#i-mail"/></svg> Enviar por correo</button>
+          </div>
+          <p class="form-note">Al enviar, se abrirá WhatsApp o tu correo con tus datos listos. También puedes escribirnos directo a <a href="#" class="js-mail-text">nuestro correo</a>.</p>
+        </form>
+        <div class="form-ok" id="formOk">
+          <div class="ok-ic"><svg><use href="#i-check"/></svg></div>
+          <h4>¡Listo! Abrimos tu mensaje.</h4>
+          <p>Si no se abrió automáticamente, usa los botones de WhatsApp o correo de la izquierda. Te responderemos muy pronto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== CTA FINAL ===== -->
 <section class="section finalcta">
   <div class="container">
@@ -1189,7 +1267,7 @@
       <h2>Tu negocio merece algo más que una hoja de Excel.</h2>
       <p>Empieza a administrar, vender y crecer con Bizko.</p>
       <div class="finalcta__cta">
-        <a href="#" class="btn btn-primary btn-lg">Comenzar gratis</a>
+        <a href="#contacto" class="btn btn-primary btn-lg">Comenzar gratis</a>
         <a href="#precios" class="btn btn-ghost btn-lg">Ver planes</a>
       </div>
       <p class="finalcta__mini">Sin tarjeta de crédito · Listo en minutos · Cancela cuando quieras</p>
@@ -1225,7 +1303,8 @@
         <a href="#top" class="brand"><span class="brand__mark"><svg viewBox="0 0 32 32"><use href="#logo"/></svg></span> Bizko</a>
         <p>Tecnología sencilla para negocios que quieren crecer.</p>
         <div class="footer__social">
-          <a href="#" aria-label="WhatsApp"><svg><use href="#i-msg"/></svg></a>
+          <a href="#" class="js-wa" aria-label="WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
+          <a href="#" class="js-mail" aria-label="Correo"><svg><use href="#i-mail"/></svg></a>
           <a href="#" aria-label="Instagram"><svg><use href="#i-image"/></svg></a>
           <a href="#" aria-label="Facebook"><svg><use href="#i-users"/></svg></a>
           <a href="#" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
@@ -1247,8 +1326,10 @@
         <a href="#faq">Preguntas frecuentes</a>
       </div>
       <div class="footer__col">
-        <h5>Empresa</h5>
-        <a href="#">Contacto</a>
+        <h5>Contacto</h5>
+        <a href="#" class="js-wa">WhatsApp</a>
+        <a href="#" class="js-mail">Correo electrónico</a>
+        <a href="#contacto">Formulario</a>
         <a href="#">Términos y condiciones</a>
         <a href="#">Política de privacidad</a>
       </div>
@@ -1262,7 +1343,7 @@
 
 <!-- ===== STICKY MOBILE CTA ===== -->
 <div class="mobile-cta">
-  <a href="#precios" class="btn btn-primary btn-block btn-lg">Comenzar gratis</a>
+  <a href="#contacto" class="btn btn-primary btn-block btn-lg">Comenzar gratis</a>
 </div>
 
 <script src="assets/script.js" defer></script>
